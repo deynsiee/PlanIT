@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---- FONT AWESOME--->
+    <script src="https://kit.fontawesome.com/e8a4207e40.js" crossorigin="anonymous"></script>
+    <!----CSS LINK---->
+    <link rel="stylesheet" href="planner.css">
+    <!---FONT LINK - POPPINS ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!----  WEBSITE TITLE ---->
+    <title>PlanIT</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<!----BODY STARTS HERE ---->
+<body>
+<!---HEADER SECTION STARTS HERE --->
+<header>
+    <nav>
+        <ul class="nav-bar">
+            <li class="logo"><a href="planner.html"><img src="images/logo.png" alt="logo" width="90"></a></li>
+            <span class="menu">
+                <li><a class="active" href="#home">HOME</a></li>
+                <li><a href="#planner">PLANNER</a></li>
+                <li><a href="#to-do">TO-DO</a></li>
+                <li><a href="#my-list">MY LIST</a></li>
+                <li><a href="#fitness">FITNESS</a></li>
+                <li><a href="#">LOGOUT</a></li>                   
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+</header>
+<!----HEADER SECTION ENDS HERE---->
+
+<!---- HOME SECTION STARTS HERE ---->
+<section class="home" id="home">
+    <div class="content">
+        <h1>WELCOME TO PLANIT!</h1>
+        <p>Welcome to our comprehensive online planner, crafted to facilitate your organization and empower you to achieve your goals.<br> 
+          Equipped with our fitness, planner, to-do, and my list features, you will have the tools necessary to seize control of your hectic<br>
+          schedule and maximize your productivity every day.</p>      
+        <a href="#planner"><button type="button" ><span></span>Go To Planner</button></a>
+    </div>
+</section>
+
+<!----HOME SECTION ENDS HERE ---->
+
+<!----PLANNER SECTION STARTS HERE ---->
+
+<section class="planner" id="planner">
+    <div class="section-title">
+    <h1>PLANNER</h1>
+    <a href="add-plan.html"><button type="button">+ Add New Plan</button></a>
+    </div>
+    <div class="container-months">
+        <div class="card"><h2>JANUARY</h2></div>
+        <div class="card"><h2>FEBRUARY</h2></div>
+        <div class="card"><h2>MARCH</h2></div>
+        <div class="card"><h2>APRIL</h2></div>
+        <div class="card"><h2>MAY</h2></div>
+        <div class="card"><h2>JUNE</h2></div>
+        <div class="card"><h2>JULY</h2></div>
+        <div class="card"><h2>AUGUST</h2></div>
+        <div class="card"><h2>SEPTEMBER</h2></div>
+        <div class="card"><h2>OCTOBER</h2></div>
+        <div class="card"><h2>NOVEMBER</h2></div>
+        <div class="card"><h2>DECEMBER</h2></div>
+        </div>
+    </div>
+</section>
+
+<!----PLANNER SECTION ENDS HERE ---->
+<!----TO-DO SECTION STARTS HERE ---->
+<section class="to-do" id="to-do">
+    <div class="section-title">
+        <h1>MY TO-DO LIST</h1>
+        <a href="add-todo.html"><button type="button">+ Add Task</button></a>
+    </div>
+</section>
+<!----TO-DO SECTION ENDS HERE ---->
+<!----MY LIST SECTION STARTS HERE ---->
+<section class="my-list" id="my-list">
+    <div class="section-title">
+        <h1>MY LIST</h1>
+        <a href="add-list.html"><button type="button">+ Add To List</button></a>
+</div>
+</section>
+<!----MY LIST SECTION ENDS HERE --->
+<!----ITNESS SECTION STARTS HERE --->
+<section class="fitness" id="fitness">
+    <div class="section-title">
+        <h1>FITNESS</h1>
+        <a href="add-fitness.html"><button type="button">+ Add Fitness Plan</button></a>
+        <a href="wh.html"><button type="button">+ Update Weight & Height</button></a>
+
+    </div>
+
+</section>
+    
+<!----FITNESS SECTION ENDS HERE --->
+<!----FOOTER SECTION STARTS HERE --->
+<section class="footer" id="footer">
+    <div class="footer-col">
+        <ul class="footer-nav">
+            <li><a href="#fitness">FITNESS</a></li>
+            <li><a href="#my-list">MY LIST</a></li>
+            <li><a href="#to-do">TO-DO</a></li>
+            <li><a class="active" href="#planner">PLANNER</a></li>
+            <li><a href="#home">HOME</a></li>
+        </ul>
+        <h3>PLANIT</h3>
+        <p>Stay Ahead and Set Your Goals. Plan It!</p>
+        <ul class="footer-socials">
+            <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></li>           
+            <li><a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-wordpress fa-lg"></i></a></li>
+        </ul>
+    </div>
+</section>
+<!----FOOTER SECTION ENDS HERE --->
+</body>
+</html>

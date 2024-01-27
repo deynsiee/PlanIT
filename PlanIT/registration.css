@@ -1,0 +1,170 @@
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+    background:#ffffff;
+    border-radius:25px
+}
+*::-webkit-scrollbar-thumb{
+    background:#551e0d;
+    border-radius:15px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+
+/*
+BODY SECTION STARTS HERE
+*/
+
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image:url(images/bg-pic.png);
+    background-size: auto;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  .container{
+    max-width: 1300px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.40);
+  }
+  
+  .container .title{
+    font-size: 50px;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 10px;
+    color: #551e0d;
+  }
+  .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: linear-gradient(174deg, rgba(85,30,13,1) 0%, rgba(169,84,58,1) 32%, rgba(209,174,155,0.9500175070028011) 62%);
+
+  }
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 10px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: large;
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-family: Poppins;
+    font-size: large;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #d9d9d9;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+    border-color: #733207;
+  }
+  
+   form .button{
+     height: 45px;
+     margin: 35px 0
+   }
+   form .button input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.5s ease;
+     background: #551e0d;  
+   }
+   form .button input:hover{
+    transform: scale(0.99);
+    background: #78301a;
+    }
+  
+   .log-in-link {
+    text-align: center;
+    padding-top: 0px;
+    color: #000;
+    max-width: 2000px;
+   } 
+  
+   .log-in-link h4 {
+    padding-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    letter-spacing: 4px;
+   }
+
+   .log-in-link a {
+    text-decoration: none;
+    color: #7e4620;
+   }
+  
+   .log-in-link a:hover {
+    color:#522609 ;
+    transform: scale(0.9);
+   }
+  
+   @media(max-width: 584px){
+   .container{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .container .content .category{
+      flex-direction: column;
+    }
+  }
+  

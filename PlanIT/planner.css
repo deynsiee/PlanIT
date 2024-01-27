@@ -1,0 +1,1522 @@
+/*
+BODY / HTML SECTION STARTS HERE
+*/
+
+body, html {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #EBDCD5;
+    scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track{
+    background:#ffffff;
+    border-radius:25px
+}
+*::-webkit-scrollbar-thumb{
+    background:#551e0d;
+    border-radius:15px
+}
+
+
+/*
+BODY SECTION ENDS HERE
+*/
+
+
+/*
+HEADER SECTION STARTS HERE
+*/
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background: rgb(85,30,13);
+    background: linear-gradient(174deg, rgba(85,30,13,0.40) 0%, rgba(169,84,58,0.95) 32%, rgba(209, 174, 155, 0.95) 62%);
+    padding: 12px 20px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    margin: 0;
+}
+.logo img {
+    padding-top: 10px;
+    width: 40px;
+    padding-left: 30px;
+    transition: all ease 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.3);
+
+}
+
+.menu {
+    display: flex;
+    padding-right: 30px;
+}
+.menu li {
+    padding-left: 30px;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    color: #551E0D;
+    font-size: large;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: 3px 2px 15px #dfcabf;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #551E0D;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover {
+    transform: scale(0.9);
+    color: #861f00;
+    text-shadow: 3px 2px 15px #fff;
+}
+.menu li a:hover:after {
+    width: 100%;
+}
+.open-menu , .close-menu {
+    position: absolute;
+    color: #551E0D;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    margin-right: 30px;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #551E0D;
+        color: #FFF;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+    .open-menu , .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+/*
+HEADER SECTION ENDS HERE
+*/
+
+/*
+HOME SECTION STARTS HERE
+*/
+
+section.home {
+    width: 100%;
+    height: 1080px;
+    background-image: linear-gradient(111deg, rgba(0,0,0,0.8) 31%, rgba(85,30,13,0.8) 68%, rgba(237,216,186,0.8) 100%),url(images/home-notebook.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section.home .content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+section.home .content h1 {
+
+    font-size: 90px;
+    margin-top: 80px;
+}
+
+section.home .content{
+    margin: 40px auto;
+    line-height: 25px;
+
+}
+
+section.home button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+    -webkit-box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+    -moz-box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+
+}
+
+section.home a button {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+
+/*
+HOME SECTION ENDS HERE
+*/
+
+
+/*
+PLANNER SECTION STARTS HERE
+*/
+
+section.planner {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+
+section.planner .section-title h1 {
+    text-align: center;
+    font-size: 100px;
+    color: #ffffff;
+    margin-bottom: 0px;
+    width: 100%;
+    background: rgb(85,30,13);
+    background: radial-gradient(circle, rgba(85,30,13,0.865983893557423) 0%, #a9543ad4 58%, rgba(209,174,155,0.9500175070028011) 87%);
+}
+
+section.planner button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 50px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+section.planner button:hover {
+    color: #fff;
+    background:#3c160a;
+    transform: scale(1.1);
+}
+div.container-months {
+    width: auto;
+    max-width: 1800px;
+    overflow: hidden;
+    margin: 50px auto 0;
+    padding: 10px;
+    height: auto;
+    background: #EBDCD5;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+div.container-months .card {
+
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #551E0D;
+    flex: 1 0 20%;
+    background: #ddc1ae;
+    width: 450px;
+    height: 1000px;
+    margin: 10px;
+    display: grid; 
+    grid-template-rows: 1fr 8fr;
+}
+
+.card-title { 
+width: 100%; 
+height: 100%; 
+
+} 
+
+.card-items { 
+    width: 100%; 
+    height: 100%;
+
+    display:grid; 
+    grid-template-rows: repeat(5, 2fr) ;
+}
+
+.plan-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.plan-item-box { 
+    width: 95%;
+    height: 85%;
+    background-color: #3c160a;
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.plan-item-box h3 {
+    font-size: 1.5vw;
+}
+
+
+div.container-months .card:hover {
+    transform: scale(1.1);
+    background: #dcb49e;
+    box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+    -webkit-box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+    -moz-box-shadow: -5px 2px 48px 4px rgba(125,117,117,0.85);
+}
+
+/*
+PLANNER SECTION ENDS HERE
+*/
+
+/*
+CSS FOR TO-DO, FITNESS AND MY LIST STARTS HERE
+*/
+
+section.to-do, section.fitness, section.my-list {
+    width: 100%;
+    height: 1080px;
+    background: #d1ae9b;
+    text-align: center;
+}
+
+
+section.to-do .section-title h1, section.fitness .section-title h1, section.my-list .section-title h1 {
+    text-align: center;
+    font-size: 100px;
+    color: #ffffff;
+    margin-bottom: 0px;
+    width: 100%;
+    background: rgb(85,30,13);
+    background: radial-gradient(circle, rgba(85,30,13,0.865983893557423) 0%, rgba(169,84,58,0.8323704481792717) 58%, rgba(209,174,155,0.9500175070028011) 87%);
+}
+
+section.to-do button, section.my-list button, section.fitness button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 50px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+section.to-do button:hover, section.my-list button:hover, section.fitness button:hover, section.home a button:hover {
+    color: #fff;
+    background:#3c160a;
+    transform: scale(1.1);
+}
+
+/*
+CSS FOR TO-DO, FITNESS AND MY LIST ENDS HERE
+*/
+
+/*
+FOOTER SECTION STARTS HERE
+*/
+
+.footer {
+    height: auto;
+    width: 100%;
+    background: #481F01;
+    color: #ffffff;
+}
+
+.footer h3 {
+    font-size: 20px;
+}
+
+
+.footer-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.footer-col .footer-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-col .footer-nav li {
+    margin: 30px;
+    border-right: 1px solid white;
+    padding-right: 50px;
+
+}
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color .4s ease;
+
+}
+
+.footer-col ul li a:hover {
+    transform: scale(1.3);
+    color: #d1ae9b;
+}
+
+.footer .footer-socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-socials li {
+    margin: 0 10px;
+}
+
+.footer .footer-socials a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer .footer-socials a i {
+    transition: color .4s ease;
+}
+
+/*
+FOOTER SECTION ENDS HERE
+*/
+
+
+.plan-wrapper{
+    background-image:url(images/bg-pic-3.png);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-box {
+    display: flex;
+    position: relative;
+}
+
+.plan-ctb-back{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+.plan-ctb-back form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-ctb-back form input[type=submit] {
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #551e0d;
+    text-align: center;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+.plan-ctb-title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.plan-ctb-title h1 {
+    font-size: 40px;
+    color: #551e0d ;
+    font-weight: 600;
+}
+
+.todo-add-content {
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.planner-add-content {
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-add-content {
+    margin-left: 40px;
+    margin-top: -10px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fitness-add-content {
+    margin-left: 40px;
+    margin-top: -50px;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    margin-top: 80px;
+    width: 700px;
+    height: 650px;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.40);
+    }
+
+.todo-container{
+    margin-top: 80px;
+    width: 700px;
+    height: 550px;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.40);
+    }    
+
+.list-container{
+    margin-top: 100px;
+    width: 700px;
+    height: 350px;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.40);
+    }
+
+.fitness-container{
+    margin-top: 80px;
+    width: 700px;
+    height: 750px;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 20px;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 7px 10px rgba(0,0,0,0.40);
+}
+
+
+    
+.container .title, .fitness-container .title, .todo-container .title, .list-container .title{
+font-size: 40px;
+font-weight: 800;
+position: relative;
+margin-top: 30px;
+margin-left: 20px;
+color: #551e0d;
+}
+    
+
+.plan-ctb-title::before{
+    content: "";
+    position: absolute;
+    left: 70px;
+    bottom: -10px;
+    height: 4px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: linear-gradient(174deg, rgba(85,30,13,1) 0%, rgba(169,84,58,1) 32%, rgba(209,174,155,0.9500175070028011) 62%);
+    }
+    
+    
+.add-content form .plan-content,.fitness-add-content form .plan-content, .list-add-content form .plan-content, .planner-add-content form .plan-content .todo-add-content form .plan-content{
+padding-top: 50px;
+/*display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 20px 0 12px 0;
+*/
+}
+    
+    form .plan-content .add-input-box{
+    margin: 20px;
+    margin-bottom: 30px;
+    }
+    form .add-input-box span.add-details{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: large;
+    color: #551E0D;
+    }
+
+
+    .plan-content .add-input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-family: Poppins;
+    font-size: 16px;
+    background-color: #eae3de;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: 2px solid #d9d9d9;
+    border-bottom-width: 1px;
+    transition: all 0.5s ease;
+    }
+
+.plan-content .list-add-input-box input{
+    height: 70px;
+    width: 100%;
+    outline: none;
+    font-family: Poppins;
+    font-size: 16px;
+    background-color: #eae3de;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: 2px solid #d9d9d9;
+    border-bottom-width: 1px;
+    transition: all 0.5s ease;
+    }
+
+
+.plan-content .add-input-box input:focus,
+.plan-content .add-input-box input:valid{
+border-color: #733207;
+}
+
+.plan-content .list-add-input-box input:focus,
+.plan-content .list-add-input-box input:valid{
+border-color: #733207;
+}
+
+form .add-button, form .fitness-add-button{
+height: 45px;
+margin: 35px 0;
+padding-right: 0;
+}
+
+    
+form .add-button input{
+text-transform: uppercase;
+float: right;
+height: 100%;
+width: 30%;
+border-radius: 5px;
+border: none;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: #551e0d;
+box-shadow: 3px 3px 15px #000;
+}
+
+form .fitness-add-button input {
+    text-transform: uppercase;
+    float: right;
+    height: 100%;
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #551e0d;
+    box-shadow: 3px 3px 15px #000;
+    
+}
+
+
+form .add-button input:hover, form .fitness-add-button input:hover{
+transform: scale(0.99);
+background: #6f2d19;
+}
+
+
+@media(max-width: 584px){
+.container{
+max-width: 100%;
+}
+form .add-content .input-box{
+margin-bottom: 15px;
+width: 100%;
+}
+form .category{
+width: 100%;
+}
+.add-content form .add-content{
+max-height: 300px;
+overflow-y: scroll;
+}
+.add-content::-webkit-scrollbar{
+width: 5px;
+}
+}
+@media(max-width: 459px){
+.container .content .category{
+flex-direction: column;
+}
+}
+
+
+
+.to-do-items {
+width: 100%; 
+height: 800px;
+;
+display: flex;
+justify-content: center;
+
+}
+
+.todo-dump { 
+width:800px ; 
+height: 700px;
+background-color: #dcb49e ;
+border-radius: 25px;
+display: grid; 
+grid-template-rows: repeat(8,1fr); 
+
+} 
+
+.dump-item { 
+width: 100% ;
+height: 100;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.dump-box { 
+width: 70%; 
+height: 80%;
+background-color: #733207;
+border-radius: 25px;
+display: grid; 
+grid-template-columns: 5fr 2fr;
+grid-template-rows: 100%;
+overflow: hidden;
+} 
+
+.dump-box:hover {
+    transform: scale(1.1);
+}
+
+.db-title { 
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%; 
+height: 100%;
+}
+
+.db-title h1 { 
+    color: white;
+} 
+
+.db-remove { 
+    width: 100%; 
+    height: 100% ;
+} 
+
+.db-remove form { 
+    width: 100%; 
+    height: 100%; 
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.db-remove input[type=submit] { 
+    width: 35%; 
+    height: 80%;
+    font-size: 1.5vw;
+    border-radius:200px;
+    border: none ;
+    background-color: #d1ae9b;
+    transition: 300ms;
+
+} 
+.db-remove input[type=submit]:hover{
+    background-color: #FFF; 
+    transform: scale(1.0);
+    cursor: pointer;
+}
+
+
+#taskid {
+    display: none;
+}
+
+
+
+.cw { 
+    
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    float: right;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+} 
+ 
+.cw-row { 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.cw-row h3 { 
+    background-color: #3c160a;
+    color: white;
+    padding:3%;
+    border-radius: 25px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ADD TO LIST SECTION STARTS HERE (ADD-LIST.HTML)
+*/
+/*
+section.add-list {
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #551E0D;
+    flex: 1 0 20%;
+    background: #ddd0c8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    border: 1px solid red;
+    background-image: linear-gradient(90deg, #642c00, #d8bc99);
+}
+
+section.add-list button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wrapper { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-add { 
+    width: 40%; 
+    height: 40%;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #DDD0C8;
+}
+
+.container-title-box { 
+    width: 100%; 
+    height: 30%;
+    display: flex;
+    position: relative;
+}
+
+.ctb-back { 
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+.ctb-back form { 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctb-back form input[type=submit] { 
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #DDD0C8;
+    color: #99775C;
+    font-weight: 900;
+    text-align: center;
+    font-weight:900;
+    
+}
+.ctb-back form input[type=submit]:hover { 
+    color:#72563f;
+}
+
+
+.ctb-title { 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.ctb-title h1 { 
+    font-size: 2vw;
+    color: #99775C;
+    font-weight: 600;
+}
+
+.container-content-box { 
+    width: 100%; 
+    height: 85%
+}
+
+.container-content-box form { 
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-content-box input[type=text] { 
+    width: 60%;
+    height: 50%;
+    border: 1px solid #323232;
+    background-color: #EAE7DD;
+    border-radius: 5px;
+    color:#551e0d;
+    font-family: Poppins;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.container-content-box input[type=submit] { 
+    background-color: #99775C;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    color: white; 
+    font-size: 1.3vw;
+    border: 2px solid #323232;
+    margin-top: 2%;
+    transition: 300ms;
+}
+
+.container-content-box input[type=submit]:hover { 
+    background-color: #775a41 ;
+}
+
+
+
+/*
+ADD TO LIST SECTION ENDS HERE (ADD-LIST.HTML)
+*/
+
+
+/*
+ADD TO PLAN SECTION STARTS HERE
+*/
+/*
+section.add-plan {
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #551E0D;
+    flex: 1 0 20%;
+    background: #ddd0c8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    background-image: linear-gradient(90deg, #642c00, #d8bc99);
+}
+
+section.add-plan button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.plan-wrapper { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-container-add { 
+    border: 3px solid red;
+    width: 40%; 
+    height: 60%;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #DDD0C8;
+
+}
+
+.plan-container-title-box { 
+    border: 3px solid greenyellow;
+    width: 100%; 
+    height: 30%;
+    display: flex;
+    position: relative;
+}
+
+.plan-ctb-back { 
+    border: 3px dotted cyan;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+.plan-ctb-back form { 
+    border: 4px dotted fuchsia;
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.plan-ctb-back form input[type=submit] { 
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #DDD0C8;
+    color: #99775C;
+    font-weight: 900;
+    text-align: center;
+    font-weight:900;
+    
+}
+.plan-ctb-back form input[type=submit]:hover { 
+    color:#72563f;
+}
+
+
+.plan-ctb-title { 
+    border: 2px solid goldenrod;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.plan-ctb-title h1 { 
+    font-size: 2vw;
+    color: #99775C;
+    font-weight: 600;
+}
+
+.plan-container-content-box { 
+    width: 100%; 
+    height: 50%;
+
+    
+}
+
+.plan-container-content-box form { 
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.plan-container-content-box input[type=text], .plan-container-content-box input[type=date], .plan-container-content-box input[type=time] { 
+    width: 60%;
+    min-height: 30px;
+    border: 1px solid #323232;
+    background-color: #EAE7DD;
+    border-radius: 5px;
+    color:#551e0d;
+    font-family: Poppins;
+    font-size: 1vw;
+    text-align: center;
+    margin: 10px;
+}
+
+.plan-container-content-box input[type=submit] { 
+    background-color: #99775C;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    color: white; 
+    font-size: 1.3vw;
+    border: 2px solid #323232;
+    margin-top: 2%;
+    transition: 300ms;
+}
+
+.plan-container-content-box input[type=submit]:hover { 
+    background-color: #775a41 ;
+}
+
+.marg-5 {
+    margin: 10px;
+}
+*/
+
+/*
+ADD TO PLAN SECTION ENDS HERE
+*/
+
+/*ADD TO DO SECTION STARTS HERE*/
+/*
+section.add-todo {
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #551E0D;
+    flex: 1 0 20%;
+    background: #ddd0c8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    border: 1px solid red;
+    background-image: linear-gradient(90deg, #642c00, #d8bc99);
+}
+
+section.add-todo button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo-wrapper { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container-add { 
+    width: 40%; 
+    height: 50%;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #DDD0C8;
+
+}
+
+.todo-container-title-box { 
+    width: 100%; 
+    height: 30%;
+    display: flex;
+    position: relative;
+}
+
+.todo-ctb-back { 
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+.todo-ctb-back form { 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.todo-ctb-back form input[type=submit] { 
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #DDD0C8;
+    color: #99775C;
+    font-weight: 900;
+    text-align: center;
+    font-weight:900;
+    
+}
+.todo-ctb-back form input[type=submit]:hover { 
+    color:#72563f;
+}
+
+
+.todo-ctb-title { 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.todo-ctb-title h1 { 
+    font-size: 2vw;
+    color: #99775C;
+    font-weight: 600;
+}
+
+.todo-container-content-box { 
+    width: 100%; 
+    height: 50%;
+
+    
+}
+
+.todo-container-content-box form { 
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo-container-content-box input[type=text], .todo-container-content-box input[type=date], .todo-container-content-box input[type=time] { 
+    width: 60%;
+    min-height: 30px;
+    border: 1px solid #323232;
+    background-color: #EAE7DD;
+    border-radius: 5px;
+    color:#551e0d;
+    font-family: Poppins;
+    font-size: 1vw;
+    text-align: center;
+    margin: 10px;
+}
+
+.todo-container-content-box input[type=submit] { 
+    background-color: #99775C;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    color: white; 
+    font-size: 1.3vw;
+    border: 2px solid #323232;
+    margin-top: 2%;
+    transition: 300ms;
+}
+
+.todo-container-content-box input[type=submit]:hover { 
+    background-color: #775a41 ;
+}
+
+.marg-5 {
+    margin: 10px;
+}
+*/
+
+/*ADD TO DO SECTION ENDS HERE*/
+
+
+
+
+
+/*ADD TO FITNESS SECTION STARTS HERE*/
+/*
+section.add-fitness {
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 50px;
+    color: #551E0D;
+    flex: 1 0 20%;
+    background: #ddd0c8;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    border: 1px solid red;
+    background-image: linear-gradient(90deg, #642c00, #d8bc99);
+}
+
+section.add-fitness  button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: #551E0D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fitness-wrapper { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fitness-container-add { 
+    width: 40%; 
+    height: 70%;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #DDD0C8;
+
+}
+
+.fitness-container-title-box { 
+    width: 100%; 
+    height: 30%;
+    display: flex;
+    position: relative;
+}
+
+.fitness-ctb-back { 
+    position: absolute;
+    width: 20%;
+    height: 100%;
+}
+
+.fitness-ctb-back form { 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fitness-ctb-back form input[type=submit] { 
+    font-size: 2vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #DDD0C8;
+    color: #99775C;
+    font-weight: 900;
+    text-align: center;
+    font-weight:900;
+    
+}
+.fitness-ctb-back form input[type=submit]:hover { 
+    color:#72563f;
+}
+
+
+.fitness-ctb-title { 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.fitness-ctb-title h1 { 
+    font-size: 2vw;
+    color: #99775C;
+    font-weight: 600;
+}
+
+.fitness-container-content-box { 
+    width: 100%; 
+    height: 50%;
+
+    
+}
+
+.fitness-container-content-box form { 
+    display: flex;
+    width: 100%; 
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fitness-container-content-box input[type=text], .fitness-container-content-box input[type=date], .fitness-container-content-box input[type=time] { 
+    width: 60%;
+    min-height: 30px;
+    border: 1px solid #323232;
+    background-color: #EAE7DD;
+    border-radius: 5px;
+    color:#551e0d;
+    font-family: Poppins;
+    font-size: 1vw;
+    text-align: center;
+    margin: 10px;
+}
+
+.fitness-container-content-box input[type=submit] { 
+    background-color: #99775C;
+    width: 30%;
+    height: 15%;
+    border-radius: 15px;
+    color: white; 
+    font-size: 1.3vw;
+    border: 2px solid #323232;
+    margin-top: 2%;
+    transition: 300ms;
+}
+
+.fitness-container-content-box input[type=submit]:hover { 
+    background-color: #775a41 ;
+}
+
+.logo-arrow {
+    text-decoration: none;
+}
+*/
+/*ADD TO FITNESS SECTION ENDS HERE*/
